@@ -7,9 +7,9 @@ const today = wyswietlDate();
 document.querySelector('.today').textContent = today;
 const wysw = document.querySelectorAll('span.kurs');
 const proxy = "https://cors-anywhere.herokuapp.com/";
-const apiEuro = `${proxy}https://api.nbp.pl/api/exchangerates/rates/c/eur/?format=json`;
-const apiDolar = `${proxy}https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json`;
-const apiFunt = `${proxy}https://api.nbp.pl/api/exchangerates/rates/c/gbp/?format=json`;
+const apiEuro = `${proxy}https://api.nbp.pl/api/exchangerates/rates/a/eur/?format=json`;
+const apiDolar = `${proxy}https://api.nbp.pl/api/exchangerates/rates/a/usd/?format=json`;
+const apiFunt = `${proxy}https://api.nbp.pl/api/exchangerates/rates/a/gbp/?format=json`;
 
 let api;
 
@@ -75,7 +75,7 @@ function pobranieKursuWaluty(api, kwota) {
     })
     .then(data => {
       // console.log(data);
-      const kurs = data.rates[0].bid;
+      const kurs = data.rates[0].mid;
       // console.log(kurs);
       const wynik = Math.round(((kwota / kurs) * 100)) / 100;
       wynikHtml.textContent = `${wejscieKwota}PLN to ${wynik}${wyjscieWaluta.toUpperCase()}`;
@@ -92,7 +92,7 @@ function wyswietlenieKursu() {
       })
       .then(data => {
         // console.log(data);
-        const kurs = data.rates[0].bid;
+        const kurs = data.rates[0].mid;
         wysw[index].textContent = kurs;
       })
   })
