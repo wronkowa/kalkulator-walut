@@ -6,10 +6,10 @@ const wynikHtml = document.querySelector('.wynikSpan');
 const today = wyswietlDate();
 document.querySelector('.today').textContent = today;
 const wysw = document.querySelectorAll('span.kurs');
-const proxy = "http://cors-anywhere.herokuapp.com/";
-const apiEuro = `${proxy}http://api.nbp.pl/api/exchangerates/rates/c/eur/?format=json`;
-const apiDolar = `${proxy}http://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json`;
-const apiFunt = `${proxy}http://api.nbp.pl/api/exchangerates/rates/c/gbp/?format=json`;
+const proxy = "https://cors-anywhere.herokuapp.com/";
+const apiEuro = `${proxy}api.nbp.pl/api/exchangerates/rates/c/eur/?format=json`;
+const apiDolar = `${proxy}api.nbp.pl/api/exchangerates/rates/c/usd/?format=json`;
+const apiFunt = `${proxy}api.nbp.pl/api/exchangerates/rates/c/gbp/?format=json`;
 
 let api;
 
