@@ -7,9 +7,9 @@ const today = wyswietlDate();
 document.querySelector('.today').textContent = today;
 const wysw = document.querySelectorAll('span.kurs');
 const proxy = "https://cors-anywhere.herokuapp.com/";
-const apiEuro = `${proxy}api.nbp.pl/api/exchangerates/rates/c/eur/?format=json`;
-const apiDolar = `${proxy}api.nbp.pl/api/exchangerates/rates/c/usd/?format=json`;
-const apiFunt = `${proxy}api.nbp.pl/api/exchangerates/rates/c/gbp/?format=json`;
+const apiEuro = `${proxy}https://api.nbp.pl/api/exchangerates/rates/c/eur/?format=json`;
+const apiDolar = `${proxy}https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json`;
+const apiFunt = `${proxy}https://api.nbp.pl/api/exchangerates/rates/c/gbp/?format=json`;
 
 let api;
 
