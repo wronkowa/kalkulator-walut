@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  height: 100vh;
+  position: relative;
+  background-color: rgb(176, 204, 221);
+}
+.container{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, .3); */
+  text-align: center;
+}
+
+header {
+  /* background-color: coral; */
+  margin-bottom: 10px;
+  padding-top: 20px;
+  position: relative;
+  background-color: rgb(172, 206, 214);
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 5px 0 rgba(131, 130, 130, 0.3);
+}
+/* header::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 80%;
+  background-color: black;
+} */
+header h1 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+header p{
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
+main {
+  /* background-color: brown; */
+  flex-grow: 1;
+}
+form {
+  padding: 10px;
+}
+.wejscie{
+  margin: 10px;
+}
+.wejscie>label,
+h2{
+  font-size: 1.8rem;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.wejscie>input{
+  font-size: 1.6rem;
+  margin: 5px 0;
+  padding: 5px;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(131, 130, 130, 0.3);
+  outline: none;
+}
+.wejscie>input:focus{
+  box-shadow: 0 0 5px 0 rgba(131, 130, 130, 0.7);
+}
+.wybor-waluty{
+  margin: 20px;
+  font-size: 1.5rem;
+}
+.wybor-waluty h2{
+  padding: 10px;
+}
+input[type=radio]{
+  /* display: none; */
+  cursor: pointer;
+ 
+}
+.radio{
+  margin:20px;
+  cursor: pointer;
+}
+.kursy-walut{
+  margin-bottom: 50px;
+}
+.kursy-walut p{
+  padding: 10px;
+  font-size: 1.5rem;
+}
+footer {
+  /* background-color: blueviolet; */
+  padding: 10px;
+  border-top: 1px solid black;
+  background-color: rgb(172, 206, 214);
+  box-shadow: 0 0 5px 0 rgba(131, 130, 130, 0.3);
+}

@@ -7,48 +7,43 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
     <header>
-      <h1>Przelicznik PLN na inne waluty</h1>
+      <h1>kalkulator walutowy</h1>
       <p>Kursy walut z NBP</p>
     </header>
 
     <main>
       <form action="">
-        <label for="">Kwota w PLN do przeliczenia<input id="do-przeliczenia" type="text"></label>
-        <!-- <p class="wybor-waluty">
-          <label>
-            <h2>Wybierz walutę wejsciową</h2>
-            <input type="radio" name="walutaWejscie" value="pln" checked>PLN
-            <input type="radio" name="walutaWejscie" value="euro">euro
-            <input type="radio" name="walutaWejscie" value="dolar">dolar
-            <input type="radio" name="walutaWejscie" value="funt">funt
-          </label>
-        </p> -->
-        <p class="wybor-waluty">
-          <label>
-            <h2>Wybierz walutę wyjsciową</h2>
-            <!-- <input type="radio" name="walutaWyjscie" value="wartość">PLN -->
-            <input type="radio" name="walutaWyjscie" value="eur" checked>euro
-            <input type="radio" name="walutaWyjscie" value="usd">dolar
-            <input type="radio" name="walutaWyjscie" value="gbp">funt
-          </label>
-        </p>
+        <div class="wejscie">
+          <label for="do-przeliczenia">Kwota w PLN:</label>
+          <input id="do-przeliczenia" type="number">
+        </div>
+        <div class="wybor-waluty">
+          <h2>Waluta wyjsciowa</h2>
+          <label class="radio"><input type="radio" name="walutaWyjscie" value="eur" checked>euro</label>
+          <label class="radio"><input type="radio" name="walutaWyjscie" value="usd">dolar</label>
+          <label class="radio"><input type="radio" name="walutaWyjscie" value="gbp">funt</label>
+        </div>
         <button>przelicz</button>
       </form>
       <div class="wynik">
-        <h1>Kwota przeliczona: <span class="wynikSpan"></span></h1>
+        <h1> <span class="wynikSpan"></span></h1>
       </div>
     </main>
-    <section class="kursyWalut">
-      <h1>Kursy walut na dzień: <span class="today"></span></h1>
+    <section class="kursy-walut">
+      <h2>Kurs PLN na dzień: <span class="today"></span></h2>
       <p>Euro: <span class="kurs"></span> </p>
       <p>Dolar: <span class="kurs"></span></p>
       <p>Funt <span class="kurs"></span></p>
     </section>
+    <footer>
+      <p>All right reserved! &copy wronkowa</p>
+    </footer>
   </div>
   <script src="main.js"></script>
 </body>
