@@ -2,7 +2,7 @@ const wejscieKwotaHtml = document.querySelector('#do-przeliczenia');
 const wyjscieWalutaHtml = document.getElementsByName('walutaWyjscie');
 let wyjscieWaluta;
 let wejscieKwota;
-const wynikHtml = document.querySelector('.wynikSpan');
+const wynikHtml = document.querySelector('.wynik h1');
 const today = wyswietlDate();
 document.querySelector('.today').textContent = today;
 const wysw = document.querySelectorAll('span.kurs');
@@ -26,7 +26,7 @@ document.querySelector('button').addEventListener('click', (e) => {
   sprWybranejWalutyWyjscie();
   wyborApi(wyjscieWaluta);
   pobranieKursuWaluty(api, wejscieKwota);
-
+  wejscieKwotaHtml.value = "";
 
 })
 

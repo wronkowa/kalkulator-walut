@@ -120,10 +120,17 @@ button:hover{
   background-color: rgb(9, 167, 202);
   
 }
+
+.wynik {
+  margin-top: 10px;
+}
+
+
 footer {
   /* background-color: blueviolet; */
   padding: 10px;
   border-top: 1px solid black;
   background-color: rgb(172, 206, 214);
   box-shadow: 0 0 5px 0 rgba(131, 130, 130, 0.3);
+  font-size: 1.5rem;
 }
